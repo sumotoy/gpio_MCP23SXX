@@ -108,3 +108,9 @@ This library works with the following Microchip MCP23Sxx series:
 		SCK   [|     |] RST
 		MOSI  [|_____|] MISO
 ```
+***
+
+<b>Wiring:</b><br>
+All chip can be supplied from 1V8 to 5V5 but I suggest a minimum of 3V3 volt to ensure a resonable SPI speed.<br>
+If not used the RST pin should be tied to VCC!<br>
+MCP23S08 and MCP23S17 use HAEN so many chip can work in the same SPI bus and sharing the same CS! To do that you should assign an hardware address using A0 & A1 pin (MCP23S08) or A0,A1,A2 pin (MCP23S17). Beware that you cannot share chip with HAEN assigned hardware (like MCP23S17) with a non haen one (like MCP23S18) even if the first one use a different address!!!<br>
