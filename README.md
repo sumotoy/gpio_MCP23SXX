@@ -114,3 +114,13 @@ This library works with the following Microchip MCP23Sxx series:
 All chip can be supplied from 1V8 to 5V5 but I suggest a minimum of 3V3 volt to ensure a resonable SPI speed.<br>
 If not used the RST pin should be tied to VCC!<br>
 MCP23S08 and MCP23S17 use HAEN so many chip can work in the same SPI bus and sharing the same CS! To do that you should assign an hardware address using A0 & A1 pin (MCP23S08) or A0,A1,A2 pin (MCP23S17). Beware that you cannot share chip with HAEN assigned hardware (like MCP23S17) with a non haen one (like MCP23S18) even if the first one use a different address!!!<br>
+I always suggest a pullUp resistor on CS line to disable chip until is inited. If using HAEN just one resistor is needed.<br>
+All chip have internal pullup that can be used for detect external switches and so on but if you have long lines you may disable internal pullup and use external pullup resistors with a value between 10K to 4k7 (lower value is good in noisy environment or long lines)<br>
+
+<b>FAQ</b><br>
+- [Q] Can I have different instances with different (or same) chips?
+- [R] ... Yes, but consider use HAEN and even share the same CS!
+- [Q] Can I share chips with HAEN and not?
+- [R] ... Yes, if you use different CS for every chip, otherwise NO.
+- [Q] Can I share MCP23S08 and MCP23S17 and using HAEN?
+- [R] ... Yes. Remember to assign different hardware address!
