@@ -1,6 +1,7 @@
 # gpio_MCP23SXX
 Fast, full featured library for Microchip MC23Sxx series for many CPU's, easy to use.<br>
 I've started a wiki here: https://github.com/sumotoy/gpio_MCP23SXX/wiki <br>
+You cannot see any code here? Do not worry, I'm usually release code only when is ready, if you see this page it means I'm working on it at the time you see this, it will be released soon.<br>
 
 This library works with the following Microchip MCP23Sxx series:
  - <b>MCP23S08</b>: 8 Port/HAEN multi address/INT
