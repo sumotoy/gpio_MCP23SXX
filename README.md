@@ -2,10 +2,10 @@
 Fast, full featured library for Microchip MC23Sxx series for many CPU's, easy to use.
 
 This library works with the following Microchip MCP23Sxx series:
- - <b>MCP23S08</b>: 8 Port/HAEN multiaddress/INT
- - <b>MCP23S09</b>: 8 Port/Fixed address/INT/Opendrain
- - <b>MCP23S17</b>: 16 Port/HAEN multiaddress/INT
- - <b>MCP23S18</b>: 16 Port/Fixed address/INT/Opendrain
+ - <b>MCP23S08</b>: 8 Port/HAEN multi address/INT
+ - <b>MCP23S09</b>: 8 Port/Fixed address/INT/Open drain out
+ - <b>MCP23S17</b>: 16 Port/HAEN multi address/INT
+ - <b>MCP23S18</b>: 16 Port/Fixed address/INT/Open drain out
  
  ***
 
