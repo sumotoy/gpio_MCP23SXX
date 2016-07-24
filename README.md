@@ -5,7 +5,21 @@ This library works with the following Microchip MCP23Sxx series:
  - <b>MCP23S08</b>: 8 Port/HAEN multiaddress/INT
  - <b>MCP23S09</b>: 8 Port/Fixed address/INT/Opendrain
  - <b>MCP23S17</b>: 16 Port/HAEN multiaddress/INT
- - <b>MCP23S18</b>: 16 Port/Fixed address/INT/Opendrain<br>
+ - <b>MCP23S18</b>: 16 Port/Fixed address/INT/Opendrain
+ 
+ ***
+
+ <b>Features</b>:<br>
+ - All chip features fully supported.
+ - Full SPI transaction compatible (where applicable).
+ - Can use all CPU/related SPI bus and pins.
+ - Much faster than any other library, uses fastest SPI method for every MCU.
+ - Commands are very simple, all gpio chip uses the same registers (automatically handled internally).
+ - Possible include library in other libraries.
+
+ ***
+<b>Speed Improvements</b>:<br>
+If the CPU supports SPI transactions there's many speed improvements, for example the limit of 10Mhz has been moved to 24Mhz without many issues, Microchip is very conservative about SPI speed but I have find a way to avoid this limitation.
 
  ***
 
