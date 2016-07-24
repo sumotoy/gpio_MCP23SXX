@@ -15,6 +15,7 @@ This library works with the following Microchip MCP23Sxx series:
  - Can use all CPU/related SPI bus and pins.
  - Much faster than any other library, uses fastest SPI method for every MCU.
  - Commands are very simple, all gpio chip uses the same registers (automatically handled internally).
+ - Library automatically support HAEN when applicable.
  - Possible include library in other libraries.
 
  ***
