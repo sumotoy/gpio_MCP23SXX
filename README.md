@@ -19,7 +19,7 @@ This library works with the following Microchip MCP23Sxx series:
 
  ***
 <b>Speed Improvements</b>:<br>
-If the CPU supports SPI transactions there's many speed improvements, for example the limit of 10Mhz has been moved to 24Mhz without many issues, Microchip is very conservative about SPI speed but I have find a way to avoid this limitation.
+If the CPU supports SPI transactions there's many speed improvements, for example the limit of 10Mhz has been moved to 24Mhz without issues, Microchip is very conservative about SPI speed but I have find a way to avoid this limitation.
 
  ***
 
