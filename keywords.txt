@@ -1,0 +1,69 @@
+#######################################
+# Syntax Coloring Map For gpio_MCP23SXX
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+gpio_MCP23SXX	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+postInstance	KEYWORD2
+gpioPinMode	KEYWORD2
+gpioPort	KEYWORD2
+gpioDigitalWrite	KEYWORD2
+gpioDigitalWriteFast	KEYWORD2
+gpioPortUpdate	KEYWORD2
+gpioPortPullup	KEYWORD2
+gpioPortInvert	KEYWORD2
+gpioPortInterrupts	KEYWORD2
+gpioPortIntControl	KEYWORD2
+gpioPortLatches	KEYWORD2
+gpioPortDefValues	KEYWORD2
+gpioSetup	KEYWORD2
+gpioDigitalInvert	KEYWORD2
+gpioDigitalReadFast	KEYWORD2
+gpioReadPortFast	KEYWORD2
+gpioReadRegisterBoth	KEYWORD2
+gpioReadRegister	KEYWORD2
+gpioReadPort	KEYWORD2
+gpioDigitalRead	KEYWORD2
+reg	KEYWORD2
+gpioReadInterrupts	KEYWORD2
+getInterruptNumber	KEYWORD2
+gpioInterruptOccourred	KEYWORD2
+setSpiSettings	KEYWORD2
+usingInterrupt	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+MCP23S08	LITERAL1
+MCP23S09	LITERAL1
+MCP23S17	LITERAL1
+MCP23S18	LITERAL1
+IODIR	LITERAL1
+IPOL	LITERAL1
+GPINTEN	LITERAL1
+DEFVAL	LITERAL1
+INTCON	LITERAL1
+GPPU	LITERAL1
+INTF	LITERAL1
+INTCAP	LITERAL1
+GPIO	LITERAL1
+OLAT	LITERAL1
+_BANKOP	LITERAL1
+_MIRROR	LITERAL1
+_SEQOP	LITERAL1
+_DISSLW	LITERAL1
+_HAEN	LITERAL1
+_ODR	LITERAL1
+_INTPOL	LITERAL1
+_INTCC	LITERAL1
+
+
