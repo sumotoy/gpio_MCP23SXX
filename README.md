@@ -142,3 +142,5 @@ All chip have internal pullup that can be used for detect external switches and 
 - [R] ... Yes, if you use different CS for every chip, otherwise NO.
 - [Q] Can I share MCP23S08 and MCP23S17 and using HAEN?
 - [R] ... Yes. Remember to assign different hardware address!
+- [Q] Can I rise up the SPI freq speed to 30 or more Mhz?
+- [R] ... No. Datasheet limits to 10Mhz but thanks some code tricks I can rise up to 24Mhz!
