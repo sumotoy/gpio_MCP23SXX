@@ -1,4 +1,5 @@
-# gpio_MCP23SXX
+# gpio_MCP23SXX<br>
+<b>Do NOT use yet! It will be ready in a couple of days...</b><br><br>
 Fast, full featured library for Microchip MC23Sxx series for many CPU's, easy to use.<br>
 I've started a wiki here: https://github.com/sumotoy/gpio_MCP23SXX/wiki <br>
 You cannot see any code here? Do not worry, I'm usually release code only when is ready, if you see this page it means I'm working on it at the time you see this, it will be released soon.<br>
