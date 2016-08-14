@@ -23,10 +23,12 @@ This library works with the following Microchip MCP23Sxx series:
  - Optional SPI legacy mode (remain compatible with SPI transactions).
 
  ***
+ 
 <b>Speed Improvements</b>:<br>
 If the CPU supports SPI transactions there's many speed improvements, for example the limit of 10Mhz has been moved to 24Mhz without issues, Microchip is very conservative about SPI speed but I have find a way to avoid this limitation.
 
  ***
+ 
 <b>Dependancies:</b>:<br>
 Apart SPI, this library uses some other libraries for improve performances and save code. You need to download the dependancies you need for your CPU:<br>
   - AVR: https://github.com/sumotoy/SPI_AVR
@@ -34,7 +36,9 @@ Apart SPI, this library uses some other libraries for improve performances and s
   - Teensy 3.0->3.6: https://github.com/sumotoy/SPI_FIFO_t3
   - Teensy LC: https://github.com/sumotoy/SPI_LC
   - DUE: https://github.com/sumotoy/SPI_DUE
+
  ***
+
 <b>Compatibility:</b>:<br>
 I will ensure the max compatibility with most used CPU but this beta support:<br>
   - Arduino UNO and any AVR 8 bit CPU (done)
@@ -43,6 +47,7 @@ I will ensure the max compatibility with most used CPU but this beta support:<br
   - Teensy LC (working on)
   - DUE (working on)
   - Many other in preparation...
+
  ***
 
 <b>MCP23S08</b><br>
