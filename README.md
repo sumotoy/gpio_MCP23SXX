@@ -29,14 +29,20 @@ If the CPU supports SPI transactions there's many speed improvements, for exampl
  ***
 <b>Dependancies:</b>:<br>
 Apart SPI, this library uses some other libraries for improve performances and save code. You need to download the dependancies you need for your CPU:<br>
- - AVR: https://github.com/sumotoy/SPI_AVR
- - ESP8266: https://github.com/sumotoy/SPI_ESP
- - Teensy 3.0->3.6: https://github.com/sumotoy/SPI_FIFO_t3
- - Teensy LC: https://github.com/sumotoy/SPI_LC
- - DUE: https://github.com/sumotoy/SPI_DUE
-
-
-
+  - AVR: https://github.com/sumotoy/SPI_AVR
+  - ESP8266: https://github.com/sumotoy/SPI_ESP
+  - Teensy 3.0->3.6: https://github.com/sumotoy/SPI_FIFO_t3
+  - Teensy LC: https://github.com/sumotoy/SPI_LC
+  - DUE: https://github.com/sumotoy/SPI_DUE
+ ***
+<b>Compatibility:</b>:<br>
+I will ensure the max compatibility with most used CPU but this beta support:<br>
+  - Arduino UNO and any AVR 8 bit CPU (done)
+  - ESP8266 (done)
+  - Teensy 3.0,  3.1 , 3.2 , 3.5 , 3.6 (done)
+  - Teensy LC (working on)
+  - DUE (working on)
+  - Many other in preparation...
  ***
 
 <b>MCP23S08</b><br>
