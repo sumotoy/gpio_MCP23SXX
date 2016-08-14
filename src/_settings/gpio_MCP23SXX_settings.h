@@ -1,6 +1,7 @@
 /*=========================================================================================
 	Part of gpio_MCP23SXX library
-    Copyright (c) 2016, .S.U.M.O.T.O.Y., coded by Max MC Costa.
+    Copyright (c) 2016, .S.U.M.O.T.O.Y. 
+	coded by Max MC Costa.
 
 Licence:
 	Licensed as GNU General Public License.
@@ -33,27 +34,17 @@ problems you can slow down a little.
 ----------------------------------------------------------------------------------*/
 static const uint32_t	_maxGpioSPIspeed	= 24000000;
 /*--------------------------------------------------------------------------------
-- ESP8266 Faster SPI -
-This force library to use the SPI.write method instead the legacy SPI.transfer.
-As result is much faster. (Thanks Reaper7)
+- Legacy SPI -
+This force library to use the internal SPI methods (classic digitalWrite and SPI.transfer)
+and library will NOT use the high speed external SPI libraries.
+However it still using (where possible) SPI transactions.
 Default:uncommented
 ----------------------------------------------------------------------------------*/
-#if defined(ESP8266)
-	#define _ESP8266_SPIFAST
-#endif
-/*--------------------------------------------------------------------------------
-- ESP8266 Compatibility mode -
-This force library to use an alternative way to trigger ESP8266 GPIO, if you uncomment
-the line it will use the standard digitaWrite wich is slow, this help debugging.
-NOTE: uncomment this, code is MUCH slower!
-Default:commented
-----------------------------------------------------------------------------------*/
-#if defined(ESP8266)
-	//#define _ESP8266_STANDARDMODE
-#endif
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//			CONSTANT
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//#define SPI_LEGACY_METHOD 1
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			CONSTANT
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 	static const uint8_t			_BANKOP				= 	0x80;// The registers associated with each port are separated into different banks
 	static const uint8_t			_MIRROR				= 	0x40;// The INT pins are internally connected
 	static const uint8_t			_SEQOP				= 	0x20;// Sequential operation disabled, address pointer does not increment
@@ -62,5 +53,26 @@ Default:commented
 	static const uint8_t			_ODR				= 	0x04;// Open-drain output (overrides the INTPOL bit).
 	static const uint8_t			_INTPOL				= 	0x02;// polarity of the INT output pin HIGH
 	static const uint8_t			_INTCC				= 	0x01;// Interrupt Clearing Control
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//			Include High Speed SPI external methods
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	#if !defined(SPI_LEGACY_METHOD)
+		#if defined(__AVR__)
+			#include "SPI_AVR.h"//TOFIX
+		#elif (defined(__MK20DX128__) || defined(__MK20DX256__) || defined(__MK64FX512__) || defined(__MK66FX1M0__))
+			#include <SPI_FIFO_t3.h>//OK
+		#elif defined(__MKL26Z64__)
+			//TODO
+		#elif defined(__SAM3X8E__)
+			//TODO
+		#elif defined(ESP8266)
+			#include "SPI_ESP.h"//OK
+		#endif
+	#else
+		//SPI legacy use internal SPI
+		#if defined(SPI_HAS_TRANSACTION)
+			static SPISettings 	_spiSettings;
+		#endif
+	#endif
 
 #endif

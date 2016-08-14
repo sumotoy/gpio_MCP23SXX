@@ -1,0 +1,23 @@
+{
+	"name": "gpio_MCP23SXX",
+	"frameworks": "arduino",
+    "platforms": [
+        "atmelavr",
+        "espressif",
+        "atmelsam",
+		"teensyduino"
+    ]
+	"keywords": "GPIO, Microchip, portExpander",
+	"description": "Library for Microchip MCP23Sxx Port Expander chip",
+	"version": "1.1.0",
+	"authors":
+	{	"name": "Max MC Costa",
+		"maintainer": true
+	},
+	"repository":
+	{	"type": "git",
+		"url": "https://github.com/sumotoy/gpio_MCP23SXX.git"
+	},
+	"exclude": "extras",
+    "examples": "examples/*/*.ino"
+}
